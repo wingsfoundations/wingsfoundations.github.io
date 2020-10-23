@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wings Foundation</title>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href='/wingsfoundations/assets/css/styles.css'>
+
+<!-- Custom Js -->
+<!-- <script src="http://localhost:4000/wingsfoundations/assets/js/main.js" defer></script> -->
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+
+<!-- smooth scroll cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+
+<script>
+// for smooth scroll
+    var scroll = new SmoothScroll('.smooth-scroll', {
+        speed:600,
+        updateURL:false,
+        offset:40
+    });
+</script>
+</head>
+<body>
+<div class="container">
+    <header>
+    <div class="logo">
+        <img src="http://localhost:4000/wingsfoundations/assets/images/wings-foundation-logo.png" alt="">
+    </div>
+
+   
+
+    <nav class="hamburger-menu">
+
+        <button class="head-btn">
+            <a href="#donate" class="smooth-scroll">
+                Donate
+            </a>
+        </button>
+        <div class="hamburger-open-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </div>
+        <ul class="hamburger-menu-options">
+            <li class="hamburger-close-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg></li>
+            <li>
+                <a href="http://localhost:4000/wingsfoundations/">
+                    HOME
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="smooth-scroll">
+                    Contact
+                </a>
+            </li>
+            <li>
+            <a href="http://localhost:4000/wingsfoundations/team.html">
+                    Know Our team
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:4000/wingsfoundations/gallery.html">
+                    Memories
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    //--------for hamburger menu
+        const menu = document.querySelector('.hamburger-menu-options');
+        const menuOpenBtn = document.querySelector('.hamburger-open-btn');
+        const menuCloseBtn = document.querySelector('.hamburger-close-btn');
+
+        menuOpenBtn.addEventListener('click', e=>{
+            menu.classList.add('hamburger-menu-options-open');
+
+            document.querySelector('body').addEventListener('click' , e=>{
+                if(!e.target.classList.contains('hamburger-menu-options') && menu.clientWidth !== 0){
+                    menu.classList.remove('hamburger-menu-options-open');
+                }
+            })
+        })
+
+        menuCloseBtn.addEventListener('click', e=>{
+            menu.classList.remove('hamburger-menu-options-open');
+            
+        })
+</script>
+
+    
+
+
+    <section class="hero" id ="hero">
+        <div class="hero-content">
+            <h1 class="hero-content-head">Wings Foundation</h1>
+            <h4 class="hero-content-moto">Bringing education to all those who need it the most</h4>
+            <p class="hero-content-para">
+                Launching for the first time in Lucknow with the aim to empower the weakest section of the society with the right to better education without monetory advantage
+            </p>
+            <button class="hero-content-btn">
+            <a href="#contact" class="smooth-scroll">Contact Now</a>
+            </button>
+        </div>    
+
+        <img src="http://localhost:4000/wingsfoundations/assets/images/hero-img-min.jpg" alt="">
+    </section>
+
+
+
+    <section class="what">
+        <h2 class="what-head">What we do?</h2>
+        <h4 class="what-tagline">Free Education For All</h4>
+        <p class="what-para ">
+            A visionary campaign to provide the right of education to one more child until we reach everyone.
+        </p>
+        <p class="what-para">
+            It is a intiative to bring the gift of <b>free education</b> to as many children as possible.
+        </p>
+        <p class="what-para">
+            Commited towards providing <b>Quality Education</b> to the Under-priviledged, house working women and illiterate adults of the society.
+        </p>
+
+        <button class="what-btn">
+            <a href="#contact" class="smooth-scroll">Enquire More</a>
+        </button>
+    </section>
+    
+    
+    
+    <section class="why">
+        <h2 class="why-head">Why we Exist?</h2>
+        <h4 class="why-tagline">We Exist Because</h4>
+
+        <div class="box-container">
+        <div class="why-box why-box-1">
+            <h4 class="why-box-head">India rank 168 among 234 countries in the literarcy rate</h4>
+            <div class="why-box-circle">
+                <img src="http://localhost:4000/wingsfoundations/assets/images/globe-img-min.jpg" alt="">
+            </div>
+            <p class="why-box-para">
+                Our aim is to start locally to give the education to the one who deserve it the most.
+            </p>
+        </div>
+
+        <div class="why-box why-box-2">
+            <h4 class="why-box-head">3 out of 10 children in India do not get their right of education</h4>
+            <div class="why-box-circle">
+                <img src="http://localhost:4000/wingsfoundations/assets/images/child-img-min.jpg" alt="">
+            </div>
+            <p class="why-box-para">
+                Even one child is valuable for us because their future is the progress of our country.
+            </p>
+        </div>
+    </div>
+    </section>
+    
+    
+    
+   <section class="donate" id ="donate">
+    <h3 class="donate-head">Donate For The Cause</h3>
+    <hr>
+    <p class="donate-para">
+        Your kind donation today helps a under-priviledged child to be a nation builder of tommorrow.
+    </p>
+    <p class="donate-para">
+        You can choose for <b>Monthly</b> or <b>One Time Donation</b> (of any amount)
+    </p>
+
+    <div class="donate-action">
+        <h6 class="donate-action-head">Contact us for more information</h6>
+        <p class="donate-action-content">9696894360</p>
+        <p class="donate-action-content">8887672904</p>
+    </div>
+    <div class="donate-action">
+        <h6 class="donate-action-head">Write to us for more queries</h6>
+        <p class="donate-action-content">query@wingsfoundations.com</p>
+    </div>
+    <div class="donate-action">
+        <h6 class="donate-action-head">Visit us at our study center</h6>
+        <p class="donate-action-content">
+            <a href="#contact" class="smooth-scroll"> Tap to know location</a>   
+        </p>
+    </div>
+    <hr>
+
+    <p class="donate-foot">Your suggestion and support is heartedly welcome. Please contact us via any of the above given methods to do so.</p>
+</section>
+    
+    
+    <section class="who">
+        <h2 class="who-head">Who are we?</h2>
+        <h4 class="who-tagline">A Non-profit Organisation</h4> 
+        <p class="who-para">
+            We are a <b>non-profit, non-governmental chairtable organisation</b>
+            working with the mission of uplifting and developing the socially and economically weaker section of the society.
+        </p>
+
+        <p class="who-para">
+            We are selfless team of <b>dedicated teachers and professionals from various field</b> that come together to create an enriching environment for child's overall growth and providing quality education.
+        </p>
+        <div class="team-container">
+        <div class="team-member team-member-1">
+            <img src="http://localhost:4000/wingsfoundations/assets/images/ngo-president-min.jpg" alt="" class="team-member-image">
+            <div class="team-member-detail">
+                <h5 class="team-member-detail-name">Farhan Habeb</h5>
+                <p class="team-member-detail-roll">NGO-President</p>
+            </div>
+        </div>
+        <div class="team-member team-member-2">
+            <img src="http://localhost:4000/wingsfoundations/assets/images/ngo-manager-min.jpg" alt="" class="team-member-image">
+            <div class="team-member-detail">
+                <h5 class="team-member-detail-name">Vishal Pandey</h5>
+                <p class="team-member-detail-roll">NGO-Manager</p>
+            </div>
+        </div>
+    </div>
+
+        <button class="who-btn">
+            <a href="http://localhost:4000/wingsfoundations/team.html">Know Our Team</a>
+        </button>
+    </section>
+    
+    
+    <section class="memories">
+        <h2 class="memories-head">Memories</h2>
+
+        <div class="memory">
+            <img src="http://localhost:4000/wingsfoundations/assets/images/memory-1-min.JPG" alt="" class="memory-img">
+            <p class="memory-description">Inaugration function Photo-1</p>
+        </div>
+
+        <div class="memory">
+            <img src="http://localhost:4000/wingsfoundations/assets/images/memory-2-min.JPG" alt="" class="memory-img">
+            <p class="memory-description">Inaugration function Photo-2</p>
+        </div>
+
+        <button class="memories-btn">
+            <a href="http://localhost:4000/wingsfoundations/gallery.html">View Gallery</a>
+        </button>
+    </section>
+
+   <section class="contact" id = "contact">
+    <h2 class="contact-head">Contact</h2>
+    <div class="contact-info">
+        <h4 class="contact-info-head">Head Office</h4>
+        <ul class="contact-info-content">
+            <li>Opposite Exon Montessori, Campbell Road Lucknow</li> 
+        </ul>
+    </div>
+    <div class="contact-info">
+        <h4 class="contact-info-head">Branches</h4>
+        <ul class="contact-info-content">
+            <li>Above Mr. Sandwich, near C Block Rajajipuram</li>
+            <li>Near Novelty Aliganj</li>
+        </ul>
+    </div>
+    <div class="contact-info">
+        <h4 class="contact-info-head">Call us at</h4>
+        <ul class="contact-info-content">
+            <li>969689360</li>
+            <li>8887672904</li>
+        </ul>
+    </div><div class="contact-info">
+        <h4 class="contact-info-head">Write To Us</h4>
+        <ul class="contact-info-content">
+            <li>query@wingsfoundations.com</li>
+        </ul>
+    </div>
+</section>
+
+   <footer>
+    <p>Non-referencial images are used for illustration purpose only and are completely copyright free.</p>
+    <p class="copyright">&copy;2020 Wings Foundation | All Rights Reserved</p>
+    <p>Developed and maintained by <a href="#">Mohit Joshi</a></p>
+</footer>
+</div>
+</body>
+</html>

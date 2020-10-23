@@ -1,0 +1,119 @@
+:root { --spacer:10px; --color-btn:#287C9B; --color-background:#FFF6F9; --color-font:#242020; --color-footer:#BCEBFC; --color-footer-font:#287C9B; --color-font-light:#fff; --color-dark-opacity:rgba(107, 111, 115, 0.3); --gradient-hero:linear-gradient(180deg, #FFF7F9 0%, #FFF6F9 27.28%, rgba(107, 111, 115, 0.6) 48.34%, rgba(34, 45, 49, 0) 100%); }
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+body { background: lightblue; font-family: 'Roboto', sans-serif; font-family: 'Montserrat', sans-serif; color: var(--color-font); background: var(--color-background); }
+
+header { background: var(--color-background); overflow: hidden; width: 100%; height: 80px; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+header .logo { margin-left: var(--spacer); width: 60px; height: 40px; }
+header .logo img { width: 100%; }
+header nav { display: flex; justify-content: space-between; align-items: center; width: 30%; margin-right: var(--spacer); }
+header nav .head-btn { border: none; background: var(--color-btn); padding: 7px 12px; border-radius: 10px; color: var(--color-font-light); font-size: 16px; }
+header nav .head-btn a { text-decoration: none; color: var(--color-font-light); }
+header nav .head-btn:hover { background: transparent; box-shadow: inset 0px 0px 0px 2px var(--color-font); }
+header nav .head-btn:hover a { color: var(--color-font); }
+header nav .hamburger-menu-options { overflow: hidden; position: fixed; top: 0; right: 0; list-style-type: none; width: 0; height: 100vh; z-index: 100; background: var(--color-background); display: flex; flex-direction: column; transition: width 150ms linear; background: #b7b7f3; }
+header nav .hamburger-menu-options .hamburger-close-btn { text-align: right; width: 20%; align-self: flex-end; }
+header nav .hamburger-menu-options li { padding: 20px; width: 100%; }
+header nav .hamburger-menu-options li a { text-decoration: none; color: var(--color-font); font-weight: 600; font-size: 0; }
+header nav .hamburger-menu-options-open { width: 60vw; }
+header nav .hamburger-menu-options-open li a { font-size: 20px; }
+
+section { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: calc( 2 * var(--spacer)); text-align: center; }
+
+.hero { height: 100vh; justify-content: flex-start; background: var(--gradient-hero); position: relative; overflow: hidden; margin-bottom: 0; padding-bottom: 0; }
+.hero-content { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 70%; }
+.hero-content-head { width: 68%; font-size: 40px; position: relative; margin: 20px; }
+.hero-content-head::before { content: ''; position: absolute; width: 120%; height: 2px; background: black; bottom: -10%; left: -10%; }
+.hero-content-moto { width: 85%; font-size: 16px; }
+.hero-content-para { width: 85%; margin: 20px; font-size: 16px; font-weight: 400; }
+.hero-content-btn { border: none; border-radius: 10px; background: var(--color-btn); color: var(--color-font-light); padding: 10px 15px; margin-top: 20px; font-size: 16px; }
+.hero-content-btn a { text-decoration: none; color: var(--color-font-light); }
+.hero-content-btn:hover { background: transparent; box-shadow: inset 0px 0px 0px 2px var(--color-font); }
+.hero-content-btn:hover a { color: var(--color-font); }
+.hero img { width: 100vw; min-width: 330px; transform: translateY(-40%); top: 20px; left: 0; z-index: -10; align-self: center; justify-self: center; }
+
+.what-head, .why-head, .who-head, .memories-head { font-size: 40px; font-weight: 700; }
+.what-tagline, .why-tagline, .who-tagline, .memories-tagline { font-size: 20px; font-weight: 500; margin-bottom: 20px; }
+.what-para, .why-para, .who-para, .memories-para { padding: 20px 15px; font-size: 16px; }
+.what-para b, .why-para b, .who-para b, .memories-para b { font-weight: 600; }
+.what-btn, .why-btn, .who-btn, .memories-btn { background: var(--color-btn); border: none; border-radius: 10px; padding: 10px 25px; color: var(--color-font-light); font-size: 18px; }
+.what-btn a, .why-btn a, .who-btn a, .memories-btn a { text-decoration: none; color: var(--color-font-light); }
+.what-btn:hover, .why-btn:hover, .who-btn:hover, .memories-btn:hover { background: transparent; box-shadow: inset 0px 0px 0px 2px var(--color-font); }
+.what-btn:hover a, .why-btn:hover a, .who-btn:hover a, .memories-btn:hover a { color: var(--color-font); }
+
+.why-box { width: 80vw; display: flex; flex-direction: column; align-items: center; margin: 10px; }
+.why-box-head { font-size: 16px; font-weight: 700; }
+.why-box-circle { width: 350px; height: 350px; border-radius: 50%; margin: 30px; flex-shrink: none; overflow: hidden; position: relative; }
+.why-box-circle img { height: 100%; position: absolute; }
+.why-box-para { padding: 10px 35px; font-size: 14px; }
+.why-box-1 img { bottom: 0; right: -10%; }
+.why-box-2 img { bottom: 0; right: -30%; }
+
+.donate { border: 2px solid var(--color-font); border-radius: 20px; margin: 20px 30px; align-items: flex-start; }
+.donate-head { font-size: 26px; margin-bottom: 20px; width: 100%; }
+.donate-para { padding: 20px 5px; font-size: 14px; text-align: left; }
+.donate-para b { font-weight: 600; }
+.donate-action { text-align: left; margin: 20px 10px; }
+.donate-action-head { font-size: 16px; font-weight: 600; }
+.donate-action-content { padding: 8px; font-size: 14px; }
+.donate-foot { padding: 0; width: 100%; font-size: 14px; margin-top: 20px; }
+.donate hr { width: 100%; color: var(--color-font); }
+
+.who .team-member { margin: 40px; width: 350px; height: 350px; border-radius: 50%; overflow: hidden; position: relative; }
+.who .team-member-image { width: 100%; position: absolute; transition: transform 250ms linear; }
+.who .team-member-detail { background: rgba(10, 58, 107, 0.6); color: #d8d7d7; position: absolute; bottom: 0; left: 0; width: 100%; height: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.who .team-member-detail-name { font-size: 16px; font-weight: 700; }
+.who .team-member-detail-roll { font-size: 12px; }
+.who .team-member:hover .team-member-image { transform: scale(1.2); }
+.who .team-member-1 .team-member-image { bottom: -10%; right: 0; }
+.who .team-member-2 .team-member-image { bottom: -55%; right: 0; width: 150%; }
+.who-btn { margin: 30px; margin-top: 40px; }
+
+.memories .memory { width: 100%; max-width: 600px; margin: 20px; }
+.memories .memory-img { border: 2px solid var(--color-font); width: 90%; }
+.memories .memory-description { padding: 10px; font-size: 16px; }
+.memories-btn { margin-top: 30px; }
+
+.contact { align-items: flex-start; text-align: left; }
+.contact-head { font-size: 38px; margin-bottom: 20px; width: 100%; text-align: center; }
+.contact-info { margin: 10px; }
+.contact-info-head { font-size: 20px; font-weight: 600; }
+.contact-info-content { margin: 10px 18px; }
+.contact-info-content li { margin: 8px 0; }
+
+footer { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; background: #555252; color: white; }
+footer p { width: 100%; padding: 10px; }
+footer p a { color: white; }
+
+@media only screen and (min-width: 600px) { header nav .head-btn { font-size: 20px; }
+  header .hamburger-menu { width: 150px; }
+  .hero { background: linear-gradient(180deg, #FFF7F9 0%, #FFF6F9 27.28%, rgba(107, 111, 115, 0.6) 78.34%, rgba(34, 45, 49, 0) 100%); }
+  .hero-content-head { font-size: 50px; }
+  .hero-content-moto { font-size: 20px; }
+  .hero-content-para { font-size: 20px; }
+  .hero-content-btn { font-size: 20px; } }
+@media only screen and (min-width: 700px) { .container { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100vw; }
+  .hero { width: 100%; }
+  .hero-content { width: 600px; }
+  .what-head, .why-head, .who-head, .memories-head, .donate-head, .contact-head { font-size: 45px; }
+  .what-tagline, .why-tagline, .who-tagline, .memories-tagline, .donate-tagline, .contact-tagline { font-size: 25px; }
+  .what-para, .why-para, .who-para, .memories-para, .donate-para, .contact-para { font-size: 20px; }
+  .what { width: 700px; }
+  .why { width: 100%; }
+  .why-box { width: 400px; display: inline-flex; }
+  .why-box-head { font-size: 22px; }
+  .why-box-para { font-size: 20px; }
+  .why-box-circle { width: 250px; height: 250px; }
+  .donate { width: 700px; }
+  .donate-action-head { font-size: 22px; }
+  .donate-action-content { font-size: 20px; }
+  .donate-foot { font-size: 18px; }
+  .who { width: 800px; }
+  .who .team-member { display: inline-flex; width: 250px; height: 250px; }
+  .contact { width: 700px; }
+  .contact-info-head { font-size: 20px; }
+  .contact-info-content { font-size: 18px; }
+  footer { width: 100%; } }
+@media only screen and (min-width: 800px) { .hero { height: 500px; background: linear-gradient(180deg, #FFF7F9 0%, #FFF6F9 17.28%, rgba(107, 111, 115, 0.3) 98.34%, rgba(34, 45, 49, 0.5) 100%); }
+  .hero img { transform: translateY(-60%); } }

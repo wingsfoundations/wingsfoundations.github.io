@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href='/wingsfoundations/assets/css/styles.css'>
+
+<!-- Custom Js -->
+<!-- <script src="http://localhost:4000/wingsfoundations/assets/js/main.js" defer></script> -->
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+
+<!-- smooth scroll cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+
+<script>
+// for smooth scroll
+    var scroll = new SmoothScroll('.smooth-scroll', {
+        speed:600,
+        updateURL:false,
+        offset:40
+    });
+</script><body><header>
+    <div class="logo">
+        <img src="http://localhost:4000/wingsfoundations/assets/images/wings-foundation-logo.png" alt="">
+    </div>
+
+   
+
+    <nav class="hamburger-menu">
+
+        <button class="head-btn">
+            <a href="#donate" class="smooth-scroll">
+                Donate
+            </a>
+        </button>
+        <div class="hamburger-open-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </div>
+        <ul class="hamburger-menu-options">
+            <li class="hamburger-close-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg></li>
+            <li>
+                <a href="http://localhost:4000/wingsfoundations/">
+                    HOME
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="smooth-scroll">
+                    Contact
+                </a>
+            </li>
+            <li>
+            <a href="http://localhost:4000/wingsfoundations/team.html">
+                    Know Our team
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:4000/wingsfoundations/gallery.html">
+                    Memories
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    //--------for hamburger menu
+        const menu = document.querySelector('.hamburger-menu-options');
+        const menuOpenBtn = document.querySelector('.hamburger-open-btn');
+        const menuCloseBtn = document.querySelector('.hamburger-close-btn');
+
+        menuOpenBtn.addEventListener('click', e=>{
+            menu.classList.add('hamburger-menu-options-open');
+
+            document.querySelector('body').addEventListener('click' , e=>{
+                if(!e.target.classList.contains('hamburger-menu-options') && menu.clientWidth !== 0){
+                    menu.classList.remove('hamburger-menu-options-open');
+                }
+            })
+        })
+
+        menuCloseBtn.addEventListener('click', e=>{
+            menu.classList.remove('hamburger-menu-options-open');
+            
+        })
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">About</h1>
+  </header>
+
+  <div class="post-content">
+    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for Minima at GitHub:
+<a href="https://github.com/jekyll">jekyll</a> /
+<a href="https://github.com/jekyll/minima">minima</a></p>
+
+<p>You can find the source code for Jekyll at GitHub:
+<a href="https://github.com/jekyll">jekyll</a> /
+<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer>
+    <p>Non-referencial images are used for illustration purpose only and are completely copyright free.</p>
+    <p class="copyright">&copy;2020 Wings Foundation | All Rights Reserved</p>
+    <p>Developed and maintained by <a href="#">Mohit Joshi</a></p>
+</footer></body>
+
+</html>
